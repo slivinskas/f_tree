@@ -228,6 +228,11 @@ Mano stiliai
 {
 	background-image:url(../images/family-two-kids-106456853.jpg);
 	background-size:cover;
-	width:270px;
-	height:190px;
+	width:100px;
+	height:100px;
+}
+
+.AtskirtiImputai input
+{
+	margin:10px;
 }
