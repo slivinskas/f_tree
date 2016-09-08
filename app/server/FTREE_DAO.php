@@ -29,7 +29,6 @@ class FTREE_DAO
                 }
                 $ret[] = $row;
             }
-
             $dbh = null;
         } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
