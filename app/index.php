@@ -9,33 +9,17 @@
 
 $user = "u290070005_ftree";
 $pass = "ftreeKaupiklis";
+$db   = "u290070005_ftree";
+$host = "mysql.hostinger.lt";
 
-class FTREE_DAO{
-    protected $connect;
-    protected $db = "";
-    protected $host = "mysql.hostinger.lt";
+include_once ("server/FTREE_DAO.php");
 
-    // Attempts to initialize the database connection using the supplied info.
-    public function FTREE_DAO($host, $username, $password, $database) {
-        $this->db = $dbh = new PDO("mysql:host=$host;dbname={$database}", $username, $password);
-    }
+$tree = new FTREE_DAO($host,$user,$pass,$db);
 
-    public function getNames(){
-        try {
-            foreach($this->db->query('SELECT * from user') as $row) {
-                print_r($row);
-            }
-            $dbh = null;
-        } catch (PDOException $e) {
-            print "Error!: " . $e->getMessage() . "<br/>";
-            die();
-        }
-    }
+$var = $tree->getNames();
 
-}
-
-$tree = new FTREE_DAO();
+print json_encode($var);
 
 if(isset($_GET["users"])){
-    print json_encode();
+    print json_encode($var);
 }
