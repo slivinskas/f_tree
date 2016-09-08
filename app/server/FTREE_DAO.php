@@ -18,17 +18,31 @@ class FTREE_DAO
         $this->db = $dbh = new PDO("mysql:host=$host;dbname={$database}", $username, $password);
     }
 
-    public function getNames(){
-        $return = array();
+    private function getData($sql){
+        $ret = array();
         try {
-            foreach($this->db->query('SELECT * from user') as $row) {
-                $return[] = $row;
+            foreach($this->db->query($sql) as $row) {
+                foreach($row as $key=>$var){
+                    if(is_numeric($key)){
+                        unset($row[$key]);
+                    }
+                }
+                $ret[] = $row;
             }
+
             $dbh = null;
         } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
             die();
         }
-        return $return;
+        return $ret;
+    }
+
+    public function getNames(){
+        return $this->getData('SELECT id, name, surname, email from user');
+    }
+
+    public function getReliations(){
+        return $this->getData('SELECT * from f_tree_level');
     }
 }

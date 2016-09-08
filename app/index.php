@@ -18,8 +18,12 @@ $tree = new FTREE_DAO($host,$user,$pass,$db);
 
 $var = $tree->getNames();
 
-print json_encode($var);
+//print json_encode($var);
 
 if(isset($_GET["users"])){
     print json_encode($var);
+}
+
+if(isset($_GET["relations"])){
+    print json_encode($tree->getReliations());
 }
