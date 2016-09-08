@@ -67,7 +67,7 @@ BANNER CLASSES
 .bannerlef{width:10px; float:left;}
 .bannerright{width:10px; float:right;}
 .banner-container{width:1000px; float:left;}
-.banner{width:960px; height:370px; background:url(../images/img-1.jpg) no-repeat; margin:0 auto;}
+.banner{width:960px; height:370px; background:url(../images/Blue-Web-Abstract-4K-Wallpapers.jpg)}
 .banner-shadow{width:960px; margin:0 auto;}
 .banner-content{width:560px; margin:0 auto; padding-top:70px;}
 .banner-content h1{font-family:"Trebuchet MS"; font-size:49px; color:#ffffff; text-align:center;}
@@ -226,8 +226,8 @@ Mano stiliai
 
 #CategoryPhoto1
 {
-	background-image:url(../images/grandfather-455980_1280.jpg);
+	background-image:url(../images/family-two-kids-106456853.jpg)
 	background-size:cover;
-	width:80px;
-	height:80px;
+	width:270px;
+	height:190px;
 }
