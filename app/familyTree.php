@@ -7,6 +7,7 @@
  */
 
 include_once ("server/FTREE_DAO.php");
+include_once ("graph.php");
 $user = "u290070005_ftree";
 $pass = "ftreeKaupiklis";
 $db   = "u290070005_ftree";
@@ -35,16 +36,34 @@ foreach ($usersNames as $user) {
 
 //========================================================
 // Santykių sąrašas
-$current = $usersRel[0]['user_id']; // esamas user
+print $current = $usersRel[0]['user_id']; // esamas user
 $usedList = array();
 $nextList = array();
-
 print_r($usersRel[0]);
 
 
-$listRel ="";
-foreach ($usersRel as $user) {
-    $listRel .= "userID {$user['user_id']} ";
-}
+$rezult = "";
 
-print $listRel;
+
+$listRel = array();
+//array_push($listRel,$usersRel[0]["user_id"]);
+/*
+foreach ($usersRel as $user) {
+    if($user["level"]=="0"){
+        array_push($listRel,$user["friend_id"]);
+    }elseif($user["level"]=="3"){
+        $user["kaimynas"] = $listRel;
+        $listRel = $user;
+    }else{
+
+    }
+}
+*/
+
+$bendras = array();
+$bendras[$usersRel[0]['user_id']]=$usersRel[0]['friend_id'];
+unset($usersRel[0]);
+
+
+
+print_r($bendras);
