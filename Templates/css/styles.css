@@ -41,11 +41,12 @@ CSS TWEAKS
 /*-------------------------------------------------
 HEADER CLASSES
 -------------------------------------------------*/
-.menu-wrapper{width:1000px; margin:0 auto; margin-top:116px; background:#F7F7F7; overflow:hidden;}
+.
+-wrapper{width:1000px; margin:0 auto; margin-top:116px; background:#F7F7F7; overflow:hidden;}
 .menu{width:534px; float:left; margin-top:20px; margin-left:20px; margin-bottom:20px}
 .menu ul li{float:left; width:100px; margin-right:4px;}
 .menu ul li a{width:100px; height:40px; line-height:40px; display:block; font-family: 'Open Sans', sans-serif; font-size:14px; color:#96577a; text-align:center; text-transform:uppercase;}
-.menu ul li a:hover{background:##F7F7F7; color:#96577a; width:100px; height:40px;}
+.menu ul li a:hover{background:#F7F7F7; color:#96577a; width:100px; height:40px;}
 .menu ul li a.active{background:#F7F7F7; color:#96577a; width:100px; height:40px;}
 
 .call{width:194px; float:right; margin-right:17px;}
@@ -83,7 +84,7 @@ GENERAL CLASSES
 .content { overflow:hidden; font-size:13px;}
 .button-link{ }
 .button-link a{font-family: "Trebuchet MS"; text-transform:uppercase; font-size:13px; text-align:center; color:#ffffff; background:#96577a; width:90px; height:30px; line-height:30px; display:block;}
-.button-link a:hover{color:#000000; background:##F7F7F7;}
+.button-link a:hover{color:#000000; background:#F7F7F7;}
 .container{width:100%; overflow:hidden; background:#F7F7F7; padding-bottom:40px;}
 /*-------------------------------------------------
 LAYOUT CLASSS
